@@ -10,14 +10,17 @@ const dotenv = require("dotenv");
 const { connectMongoDb } = require("./database");
 dotenv.config({ path: "./Config/config.env" });
 const PORT = process.env.PORT || 5700;
+let server;
 
 
+connectMongoDb(startServer);
 
-connectMongoDb();
-
-const server = app.listen(PORT, () => {
+function startServer(){
+  server = app.listen(PORT, () => {
    console.log("Server Listening on " + PORT);
  });
+
+}
 
 
 
