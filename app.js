@@ -8,7 +8,7 @@ const { ErrorController } = require('./Controllers/ErrorController.js');
 const path = require('path');
 app.use(express.json());
 app.use(cors({
-    origin: ['http://localhost:3000'],
+    origin: ['http://localhost:3000', 'https://instagramyouthclubvideoscom.netlify.app'],
     
     credentials: true,
 }))
