@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const NewErrorHandler = require("./Utils/NewErrorHandler");
 
 exports.connectMongoDb = function(callback){
+  console.log(process.env.DATABASE_URL)
     mongoose.connect(
         process.env.DATABASE_URL,
         {
